@@ -12,7 +12,9 @@
     const root = document.getElementById('root');
     const xhr = new XMLHttpRequest();
     const _URL = "https://pokeapi.co/api/v2/pokemon/ditto";
+    // 요청초기화
     xhr.open('GET', _URL);
+    // 요청을 전송합니다. 비동기 요청(기본 동작)인 경우, send()는 요청을 전송하는 즉시 반환합니다.
     xhr.send();
     xhr.addEventListener('load', () => {
       const _pokemonData = JSON.parse(xhr.response);
